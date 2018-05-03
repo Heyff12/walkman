@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>教学示例</title>
+    <meta name="keywords" content="canvas动画" />
+    <meta name="description" content="canvas动画" />
+    <link rel="stylesheet" href="./images/reset.css" />
+    <link rel="stylesheet" href="./images/main.css" />
+    <link rel="stylesheet" href="./images/webkit_keyframes.css" />
+    <link rel="stylesheet" href="./images/moz_keyframes.css" />
+    <link rel="stylesheet" href="./images/ms_keyframes.css" />
+    <link rel="stylesheet" href="./images/o_keyframes.css" />
+    <link rel="stylesheet" href="./images/keyframes.css" />
+    <link rel="stylesheet" href="./images/common.css" />
+    <!-- <meta name=”viewport” content="width=device-width, initial-scale=1, maximum-scale=1″ user-scalable=no" /> -->
+    <link rel="stylesheet" href="index.css" />
+
+</head>
+
+<body>
+
+    <canvas id="study"></canvas>
+    <!-- <div class="bg"></div>   -->
+    <!-- <div class="ren">
+        <img src="./ren.gif">
+    </div> -->
+    <div id="canvas" style="height:520px">
+        <div class="sky">
+            <div class="cloud-1"></div>
+            <div class="cloud-2"></div>
+            <div class="cloud-3"></div>
+            <div class="cloud-4"></div>
+            <div class="cloud-5"></div>
+            <div class="cloud-6"></div>
+            <div class="cloud-7"></div>
+            <div class="cloud-8"></div>
+        </div>
+
+        <div class="horizon"></div>
+
+        <div class="ground">
+            <div class="sign-best"></div>
+            <div class="sign-no-js"></div>
+            <div class="sign-lots-of-divs"></div>
+            <div class="sign-all-css"></div>
+        </div>
+
+        <!-- skeleton and shadow -->
+        <div class="shadow"></div>
+        <div class="me">
+
+            <div class="torso">
+                <div class="left leg">
+                    <div class="left thigh">
+                        <div class="left shin">
+                            <div class="left foot">
+                                <div class="left toes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- left leg -->
+
+                <div class="right leg">
+                    <div class="right thigh">
+                        <div class="right shin">
+                            <div class="right foot">
+                                <div class="right toes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right leg -->
+
+                <div class="left arm">
+                    <div class="left bicep">
+                        <div class="left forearm"></div>
+                    </div>
+                </div>
+                <!-- left arm -->
+
+                <div class="right arm">
+                    <div class="right bicep">
+                        <div class="right forearm"></div>
+                    </div>
+                </div>
+                <!-- right arm -->
+
+            </div>
+            <!-- torso -->
+        </div>
+        <!-- me -->
+        <!-- 对话 -->
+        <p class="hua hua1">小个子，好不容易一起出来散步，你这么愁容满面是咋回事儿啊？</p>
+        <p class="hua hua2">╮(╯▽╰)╭哎，我昨天在支付宝存了100万元钱，年收益率为1.2%，我不知道怎么计算收益额……
+            </p>
+        <p class="hua hua3">
+            O__O "…，我也计算不来！</p>
+        <p class="hua hua4">
+            真后悔高中没有好好学习数学，否则也不用为这个简单的收益问题心烦！！！</p>
+        <div class="overlay"></div>
+
+    </div>
+    <!-- <div class="btn">惦记我，对话！</div> -->
+    <!-- canvas -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script>
+        var a = 0;
+        $('body').on('click',()=>{
+            if(a==0){
+                $('.hua1').show().siblings('.hua').hide();
+                a++;
+            }else if(a==1){
+                $('.hua2').show().siblings('.hua').hide();
+                a++;
+            } else if (a == 2) {
+                $('.hua3').show().siblings('.hua').hide();
+                a++;
+            } else if (a == 3) {
+                $('.hua4').show().siblings('.hua').hide();
+                a=0;
+            }
+        })        
+    </script>
+</body>
+
+</html>
